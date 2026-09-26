@@ -6,17 +6,12 @@
   ],
   "messages": [
     {
-      "type": "random",
-      "choices": [
-        {
-          "type": "text",
-          "content": "续火花 ✨"
-        },
-        {
-          "type": "text",
-          "content": "来啦 🌙"
-        }
-      ]
+      "type": "text",
+      "value": "续火花 ✨"
+    },
+    {
+      "type": "text",
+      "value": "来啦 🌙"
     }
   ],
   "send_interval_seconds": {
