@@ -37,9 +37,16 @@ jobs:
           python-version: "3.11"
       - run: pip install -r requirements.txt
       - run: python -m playwright install --with-deps chromium
-      - name: Write protected configuration
+      - name: Write configuration (repo file first)
         shell: bash
-        run: printf '%s' "$DOUYIN_CONFIG" > config.json
+        run: |
+          if [ -f user-config.json ]; then
+            cp user-config.json config.json
+            echo "using user-config.json from repo"
+          else
+            printf '%s' "$DOUYIN_CONFIG" > config.json
+            echo "using DOUYIN_CONFIG secret"
+          fi
       - name: Write multi-account configuration
         shell: bash
         env:
