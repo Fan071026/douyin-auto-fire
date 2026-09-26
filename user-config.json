@@ -1,0 +1,25 @@
+{
+  "task_id": "daily-streak",
+  "timezone": "Asia/Shanghai",
+  "friends": [
+    "智能6班帅"
+  ],
+  "messages": [
+    {
+      "type": "random",
+      "choices": [
+        {
+          "type": "text",
+          "content": "续火花 ✨"
+        }
+      ]
+    }
+  ],
+  "send_interval_seconds": {
+    "min": 3,
+    "max": 8
+  },
+  "prevent_duplicates": true,
+  "target_open_retries": 1,
+  "target_open_timeout_seconds": 15
+}
